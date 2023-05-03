@@ -4,9 +4,8 @@ export default function Home() {
   const { data: session } = useSession()
   if (session) {
     return (
-      <div className="bg-blue-900 w-screen h-screen flex items-center justify-center">
+      <div className="bg-blue-900 w-screen min-h-screen ">
         <p> Signed in as {session.user.email}</p>
-        <button onClick={() => signOut()}>Sign out</button>
       </div>
     )
   }
